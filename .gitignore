@@ -14,4 +14,4 @@ target/
 .idea/
 *.iml
 # Compiled Java files
-*.class
+*.class.DS_Store
