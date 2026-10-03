@@ -1,0 +1,481 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #173f7a;
+}
+
+
+/* ================================
+   MAIN PAGE
+================================ */
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   LEFT SIDE
+================================ */
+
+.left-section {
+    width: 50%;
+    height: 100vh;
+
+    background: linear-gradient(
+            135deg,
+            #eef3ff,
+            #f3f4ff
+    );
+
+    padding: 28px 45px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   BRAND - SMALL TOP LEFT
+================================ */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0;
+}
+
+.logo-image {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.astra {
+    color: #173f7a;
+}
+
+.vidya {
+    color: #f2a900;
+}
+
+.brand-text p {
+    margin-top: 4px;
+    font-size: 18px;
+    color: #60789b;
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   MAIN LEFT CONTENT
+================================ */
+
+.welcome-section {
+    margin-top: 55px;
+}
+
+.welcome-section h2 {
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    color: #173f7a;
+}
+
+.welcome-section p {
+    margin-top: 18px;
+
+    max-width: 500px;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
+    color: #657c9e;
+}
+
+
+/* ================================
+   ILLUSTRATION
+================================ */
+
+.illustration {
+    margin-top: 30px;
+
+    width: 90%;
+
+    max-width: 560px;
+
+    height: 170px;
+
+    border-radius: 28px;
+
+    background: linear-gradient(
+            135deg,
+            #dceaff,
+            #eee5ff
+    );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 45px;
+
+    flex-shrink: 0;
+}
+
+.books {
+    font-size: 65px;
+}
+
+.student {
+    font-size: 65px;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.features {
+    margin-top: 25px;
+
+    width: 90%;
+
+    max-width: 560px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.feature {
+    text-align: center;
+
+    color: #60789b;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+.feature-icon {
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.right-section {
+    width: 50%;
+    height: 100vh;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    overflow: hidden;
+}
+
+
+/* ================================
+   LOGIN CARD
+================================ */
+
+.login-card {
+    width: 100%;
+
+    max-width: 560px;
+
+    padding: 42px 55px;
+
+    border-radius: 28px;
+
+    background: #ffffff;
+
+    box-shadow:
+            0 15px 45px rgba(30, 70, 130, 0.08);
+}
+
+.login-card h2 {
+    font-size: 44px;
+
+    color: #173f7a;
+
+    margin-bottom: 7px;
+}
+
+.subtitle {
+    font-size: 19px;
+
+    color: #647b9d;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #173f7a;
+
+    margin-bottom: 9px;
+}
+
+.form-group input {
+    width: 100%;
+
+    height: 55px;
+
+    border: 1px solid #c9d7ed;
+
+    border-radius: 13px;
+
+    padding: 0 17px;
+
+    font-size: 16px;
+
+    color: #333;
+
+    outline: none;
+
+    background: #f8faff;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #347bea;
+
+    background: #ffffff;
+
+    box-shadow:
+            0 0 0 3px rgba(52, 123, 234, 0.1);
+}
+
+
+/* ================================
+   PASSWORD
+================================ */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 55px;
+}
+
+.eye-button {
+    position: absolute;
+
+    right: 13px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* ================================
+   FORGOT PASSWORD
+================================ */
+
+.forgot-container {
+    text-align: right;
+
+    margin-top: -3px;
+
+    margin-bottom: 22px;
+}
+
+.forgot-container a {
+    text-decoration: none;
+
+    color: #347bea;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+.forgot-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   LOGIN BUTTON
+================================ */
+
+.login-button {
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #347bea;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-button:hover {
+    background: #2568d0;
+}
+
+
+/* ================================
+   MESSAGE
+================================ */
+
+.login-message {
+    text-align: center;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   SCHOOL INFO
+================================ */
+
+.account-info {
+    margin-top: 22px;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    background: #f2f6ff;
+
+    text-align: center;
+}
+
+.account-info p {
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    color: #647b9d;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+    html,
+    body {
+        overflow: auto;
+    }
+
+    .login-page {
+        height: auto;
+
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-section {
+        min-height: 600px;
+    }
+
+    .right-section {
+        min-height: 650px;
+    }
+}
