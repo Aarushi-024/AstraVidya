@@ -16,7 +16,6 @@ public class TopicController {
                     "Separation of Substances",
                     "Changes Around Us"
             );
-
         }
         return Arrays.asList(
                 "Introduction",

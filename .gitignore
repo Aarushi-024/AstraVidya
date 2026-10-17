@@ -12,6 +12,7 @@
 target/
 #Intellij IDEA
 .idea/
+.env
 *.iml
 # Compiled Java files
 *.class
