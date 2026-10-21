@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstraVidya - Create School Account</title>
+    <link rel="stylesheet" href="admincreate.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left-section">
+        <img src="../AstraVidyalogo.png" class="logo" alt="AstraVidya Logo">
+        <h1>AstraVidya</h1>
+
+        <p class="tagline">
+            Smart Learning &amp; School Management Platform
+        </p>
+
+        <div class="illustration">🎓</div>
+    </div>
+
+    <div class="right-section">
+        <div class="form-box">
+
+            <h2>Create School Account</h2>
+            <p class="subtitle">Register your school with AstraVidya</p>
+
+            <form id="createForm">
+                <label for="schoolName">School Name</label>
+                <input type="text" id="schoolName"
+                       placeholder="Enter school name" required>
+
+                <label for="schoolCode">School Code</label>
+                <input type="text" id="schoolCode"
+                       placeholder="Example: ABC001" required>
+
+                <label for="adminName">Admin Name</label>
+                <input type="text" id="adminName"
+                       placeholder="Enter admin name" required>
+
+                <label for="adminEmail">Email</label>
+                <input type="email" id="adminEmail"
+                       placeholder="Enter admin email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone"
+                       placeholder="Enter phone number" required>
+
+                <label for="createPassword">Create Password</label>
+
+                <div class="password-box">
+                    <input type="password" id="createPassword"
+                           placeholder="Create password" required>
+
+                    <button type="button" class="eye"
+                            onclick="togglePassword('createPassword', this)">
+                        ◉
+                    </button>
+                </div>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword"
+                       placeholder="Confirm password" required>
+
+                <button type="submit" class="main-btn">
+                    Create Account
+                </button>
+            </form>
+
+            <p class="switch-text">
+                Already have an account?
+                <a href="../Admin Login/adminlogin.html">Login</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="admincreate.js"></script>
+</body>
+</html>

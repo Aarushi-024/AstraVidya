@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | AstraVidya</title>
+    <link rel="stylesheet" href="studentdashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <a href="../index.html" class="brand">
+            <img src="../AstraVidyalogo.png" alt="AstraVidya logo">
+            <span>Astra<span class="brand-highlight">Vidya</span></span>
+        </a>
+
+        <div class="sidebar-label">LEARNING SPACE</div>
+
+        <nav class="navigation">
+            <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#subjects" class="nav-link" data-section="subjects">
+                <span class="nav-icon">▤</span>
+                <span>My Subjects</span>
+            </a>
+
+            <a href="#materials" class="nav-link" data-section="materials">
+                <span class="nav-icon">▧</span>
+                <span>Study Materials</span>
+            </a>
+
+            <a href="#assignments" class="nav-link" data-section="assignments">
+                <span class="nav-icon">☷</span>
+                <span>Assignments</span>
+                <span class="nav-count">2</span>
+            </a>
+
+            <a href="#quizzes" class="nav-link" data-section="quizzes">
+                <span class="nav-icon">✎</span>
+                <span>Quizzes & Practice</span>
+            </a>
+
+            <a href="#progress" class="nav-link" data-section="progress">
+                <span class="nav-icon">↗</span>
+                <span>My Progress</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-label second-label">PERSONAL</div>
+
+        <nav class="navigation">
+            <a href="#announcements" class="nav-link" data-section="announcements">
+                <span class="nav-icon">♧</span>
+                <span>Announcements</span>
+            </a>
+
+            <a href="#profile" class="nav-link" data-section="profile">
+                <span class="nav-icon">◎</span>
+                <span>My Profile</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="help-card">
+                <div class="help-icon">✦</div>
+                <strong>Keep learning!</strong>
+                <p>Every small step takes you closer to your goals.</p>
+                <a href="#subjects" data-section="subjects">Explore subjects →</a>
+            </div>
+
+            <button class="logout-button" id="logoutButton">
+                <span class="nav-icon">↪</span>
+                <span>Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content" id="dashboard">
+
+        <header class="topbar">
+            <button class="menu-button" id="menuButton" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <div class="breadcrumb">
+                <span>Learning Space</span>
+                <span class="breadcrumb-divider">/</span>
+                <strong id="pageTitle">Dashboard</strong>
+            </div>
+
+            <div class="topbar-right">
+                <button class="icon-button notification-button"
+                        id="notificationButton"
+                        aria-label="View announcements">
+                    ♧
+                    <span class="notification-dot"></span>
+                </button>
+
+                <button class="profile-button" id="profileButton">
+                    <span class="avatar">S</span>
+                    <span class="profile-info">
+                        <strong id="headerStudentName">Student</strong>
+                        <small id="headerStudentClass">My learning account</small>
+                    </span>
+                    <span class="dropdown-arrow">⌄</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dashboard overview -->
+        <section class="page-section" id="dashboard-section">
+
+            <div class="welcome-row">
+                <div>
+                    <div class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        YOUR LEARNING SPACE
+                    </div>
+                    <h1>Welcome back, <span id="welcomeName">Student</span>!</h1>
+                    <p class="welcome-subtitle">
+                        Ready to discover something new today?
+                    </p>
+                </div>
+
+                <div class="date-card">
+                    <span class="date-symbol">◷</span>
+                    <div>
+                        <strong id="currentDate">Today</strong>
+                        <small>Make today count</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero card -->
+            <section class="hero-card">
+                <div class="hero-content">
+                    <span class="hero-tag">YOUR JOURNEY CONTINUES</span>
+                    <h2>Learn at your pace.<br>Grow every day.</h2>
+                    <p>
+                        Explore your subjects, practise what you've learned,
+                        and celebrate every milestone.
+                    </p>
+                    <button class="primary-button" data-go="subjects">
+                        Continue learning <span>→</span>
+                    </button>
+                </div>
+
+                <div class="hero-art" aria-hidden="true">
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+                    <div class="book-art">
+                        <div class="book-page"></div>
+                        <div class="book-page book-page-two"></div>
+                        <span>✦</span>
+                    </div>
+                    <div class="floating-star star-one">✦</div>
+                    <div class="floating-star star-two">✧</div>
+                    <div class="floating-dot dot-one"></div>
+                    <div class="floating-dot dot-two"></div>
+                </div>
+            </section>
+
+            <!-- Stats -->
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon purple-icon">▤</span>
+                        <span class="stat-caption">YOUR LEARNING</span>
+                    </div>
+                    <div class="stat-value" id="subjectCount">4</div>
+                    <div class="stat-label">Subjects to explore</div>
+                    <div class="stat-bottom">Build your knowledge daily</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon green-icon">✓</span>
+                        <span class="stat-caption">KEEP GOING</span>
+                    </div>
+                    <div class="stat-value" id="completedCount">0</div>
+                    <div class="stat-label">Lessons completed</div>
+                    <div class="stat-bottom">Every lesson matters</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon orange-icon">☷</span>
+                        <span class="stat-caption">UP NEXT</span>
+                    </div>
+                    <div class="stat-value" id="pendingCount">2</div>
+                    <div class="stat-label">Pending assignments</div>
+                    <div class="stat-bottom">Check what needs attention</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon blue-icon">↗</span>
+                        <span class="stat-caption">YOUR PROGRESS</span>
+                    </div>
+                    <div class="stat-value" id="progressValue">0%</div>
+                    <div class="stat-label">Learning progress</div>
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Subjects -->
+            <section class="content-section" id="subjects">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">DISCOVER & LEARN</span>
+                        <h2>My subjects</h2>
+                        <p>Choose a subject and continue your learning journey.</p>
+                    </div>
+                    <button class="text-button" data-go="subjects">
+                        View all subjects <span>→</span>
+                    </button>
+                </div>
+
+                <div class="subjects-grid" id="subjectsGrid">
+
+                    <article class="subject-card subject-purple">
+                        <div class="subject-top">
+                            <div class="subject-illustration">∑</div>
+                            <span class="subject-chip">SUBJECT 01</span>
+                        </div>
+                        <h3>Mathematics</h3>
+                        <p>Numbers, patterns and problem-solving.</p>
+                        <div class="subject-progress">
+                            <div><span>Learning progress</span><strong>0%</strong></div>
+                            <div class="progress-track"><div class="progress-fill" style="width:0%"></div></div>
+                        </div>
+                        <button class="subject-button" data-subject="Mathematics">
+                            Open subject <span>→</span>
+                        </button>
+                    </article>
+
+                    <article class="subject-card subject-blue">
+                        <div class="subject-top">
+                            <div class="subject-illustration">Aa</div>
+                            <span class="subject-chip">SUBJECT 02</span>
+                        </div>
+                        <h3>English</h3>
+                        <p>Words, stories and communication.</p>
+                        <div class="subject-progress">
+                            <div><span>Learning progress</span><strong>0%</strong></div>
+                            <div class="progress-track"><div class="progress-fill" style="width:0%"></div></div>
+                        </div>
+                        <button class="subject-button" data-subject="English">
+                            Open subject <span>→</span>
+                        </button>
+                    </article>
+
+                    <article class="subject-card subject-green">
+                        <div class="subject-top">
+                            <div class="subject-illustration">♧</div>
+                            <span class="subject-chip">SUBJECT 03</span>
+                        </div>
+                        <h3>Environmental Studies</h3>
+                        <p>Explore nature and the world around you.</p>
+                        <div class="subject-progress">
+                            <div><span>Learning progress</span><strong>0%</strong></div>
+                            <div class="progress-track"><div class="progress-fill" style="width:0%"></div></div>
+                        </div>
+                        <button class="subject-button" data-subject="Environmental Studies">
+                            Open subject <span>→</span>
+                        </button>
+                    </article>
+
+                    <article class="subject-card subject-orange">
+                        <div class="subject-top">
+                            <div class="subject-illustration">✦</div>
+                            <span class="subject-chip">SUBJECT 04</span>
+                        </div>
+                        <h3>General Knowledge</h3>
+                        <p>Discover interesting facts about everything.</p>
+                        <div class="subject-progress">
+                            <div><span>Learning progress</span><strong>0%</strong></div>
+                            <div class="progress-track"><div class="progress-fill" style="width:0%"></div></div>
+                        </div>
+                        <button class="subject-button" data-subject="General Knowledge">
+                            Open subject <span>→</span>
+                        </button>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Lower dashboard -->
+            <div class="bottom-grid">
+
+                <section class="panel" id="assignments">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-kicker">STAY ON TRACK</span>
+                            <h2>Upcoming assignments</h2>
+                        </div>
+                        <span class="panel-icon">☷</span>
+                    </div>
+
+                    <div id="assignmentList">
+                        <article class="assignment-item">
+                            <div class="assignment-icon assignment-purple">∑</div>
+                            <div class="assignment-details">
+                                <strong>Mathematics practice</strong>
+                                <span>Complete the practice questions</span>
+                                <small>Sample assignment</small>
+                            </div>
+                            <button class="small-action" data-assignment="Mathematics practice">Open</button>
+                        </article>
+
+                        <article class="assignment-item">
+                            <div class="assignment-icon assignment-blue">Aa</div>
+                            <div class="assignment-details">
+                                <strong>English reading</strong>
+                                <span>Read and answer the questions</span>
+                                <small>Sample assignment</small>
+                            </div>
+                            <button class="small-action" data-assignment="English reading">Open</button>
+                        </article>
+                    </div>
+
+                    <p class="demo-note">Demo assignments — real tasks will appear when connected to the backend.</p>
+                </section>
+
+                <section class="panel" id="progress">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-kicker">LITTLE STEPS, BIG GROWTH</span>
+                            <h2>My learning progress</h2>
+                        </div>
+                        <span class="panel-icon">↗</span>
+                    </div>
+
+                    <div class="progress-summary">
+                        <div class="progress-circle" id="progressCircle">
+                            <div>
+                                <strong id="circleValue">0%</strong>
+                                <span>completed</span>
+                            </div>
+                        </div>
+                        <div class="progress-summary-text">
+                            <strong>Keep it up!</strong>
+                            <p>Your progress grows as you complete lessons.</p>
+                        </div>
+                    </div>
+
+                    <div class="milestone-row">
+                        <span class="milestone-icon">✦</span>
+                        <div>
+                            <strong>Your next milestone</strong>
+                            <p>Complete your first lesson.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Announcements -->
+            <section class="panel announcement-panel" id="announcements">
+                <div class="panel-heading">
+                    <div>
+                        <span class="section-kicker">WHAT'S NEW</span>
+                        <h2>Announcements</h2>
+                    </div>
+                    <span class="panel-icon">♧</span>
+                </div>
+
+                <div class="announcement-item">
+                    <span class="announcement-indicator"></span>
+                    <div>
+                        <strong>Welcome to AstraVidya!</strong>
+                        <p>Your learning space is ready. Explore your subjects to get started.</p>
+                        <small>Welcome message · Demo</small>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <span>© <span id="currentYear"></span> AstraVidya</span>
+                <span>Learn with curiosity. Grow with confidence.</span>
+            </footer>
+
+        </section>
+
+        <!-- Study materials -->
+        <section class="page-section hidden" id="materials-section">
+            <div class="section-heading page-heading">
+                <div>
+                    <span class="section-kicker">YOUR RESOURCES</span>
+                    <h1>Study materials</h1>
+                    <p>Find learning resources for your subjects.</p>
+                </div>
+            </div>
+            <div class="empty-state">
+                <div class="empty-icon">▧</div>
+                <h2>Your learning library</h2>
+                <p>Study notes, books and learning resources will appear here when available.</p>
+                <button class="primary-button" data-go="subjects">Explore subjects →</button>
+            </div>
+        </section>
+
+        <!-- Assignments -->
+        <section class="page-section hidden" id="assignments-section">
+            <div class="section-heading page-heading">
+                <div>
+                    <span class="section-kicker">YOUR TASKS</span>
+                    <h1>Assignments</h1>
+                    <p>Review your tasks and keep track of your work.</p>
+                </div>
+            </div>
+            <div class="assignment-page-list" id="allAssignments"></div>
+        </section>
+
+        <!-- Quizzes -->
+        <section class="page-section hidden" id="quizzes-section">
+            <div class="section-heading page-heading">
+                <div>
+                    <span class="section-kicker">TEST YOUR KNOWLEDGE</span>
+                    <h1>Quizzes & practice</h1>
+                    <p>Learn by practising and checking your understanding.</p>
+                </div>
+            </div>
+            <div class="quiz-grid">
+                <article class="quiz-card">
+                    <span class="quiz-icon quiz-purple">∑</span>
+                    <h3>Number practice</h3>
+                    <p>Try a short mathematics quiz.</p>
+                    <button class="subject-button" data-quiz="math">Start practice →</button>
+                </article>
+                <article class="quiz-card">
+                    <span class="quiz-icon quiz-blue">Aa</span>
+                    <h3>English practice</h3>
+                    <p>Check your vocabulary and language skills.</p>
+                    <button class="subject-button" data-quiz="english">Start practice →</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Profile -->
+        <section class="page-section hidden" id="profile-section">
+            <div class="section-heading page-heading">
+                <div>
+                    <span class="section-kicker">YOUR ACCOUNT</span>
+                    <h1>My profile</h1>
+                    <p>View your student information.</p>
+                </div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-large-avatar" id="profileAvatar">S</div>
+                <h2 id="profileName">Student</h2>
+                <p id="profileClass">Student account</p>
+                <div class="profile-fields">
+                    <div><span>Name</span><strong id="profileFieldName">Student</strong></div>
+                    <div><span>Class / Grade</span><strong id="profileFieldClass">Not set</strong></div>
+                    <div><span>Learning platform</span><strong>AstraVidya</strong></div>
+                </div>
+                <p class="demo-note">Profile information is currently stored in this browser for demonstration.</p>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<script src="studentdashboard.js"></script>
+</body>
+</html>

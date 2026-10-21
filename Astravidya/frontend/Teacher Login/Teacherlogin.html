@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstraVidya - Teacher Login</title>
+    <link rel="stylesheet" href="../Admin%20Login/adminlogin.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Left Side -->
+    <div class="left-section">
+        <img src="../AstraVidyalogo.png" class="logo" alt="AstraVidya Logo">
+
+        <h1>AstraVidya</h1>
+
+        <p class="tagline">
+            Smart Learning &amp; School Management Platform
+        </p>
+
+        <div class="illustration">
+            🎓
+        </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right-section">
+
+        <div class="form-box" id="loginBox">
+
+            <h2>Teacher Login</h2>
+            <p class="subtitle">Login to start learning</p>
+
+            <form id="loginForm">
+
+                <label for="loginId">Teacher ID</label>
+                <input
+                        type="text"
+                        id="loginId"
+                        placeholder="Enter Teacher ID"
+                        required
+                >
+
+                <label for="loginPassword">Password</label>
+
+                <div class="password-box">
+                    <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter password"
+                            required
+                    >
+
+                    <button
+                            type="button"
+                            class="eye"
+                            onclick="togglePassword('loginPassword', this)">
+                        ◉
+                    </button>
+                </div>
+
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="main-btn">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../Admin%20Login/adminlogin.js"></script>
+
+</body>
+</html>
